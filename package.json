@@ -24,7 +24,7 @@
     "aws-appsync-auth-link": "^3.0.7",
     "graphql": "^16.10.0",
     "jose": "^5.9.6",
-    "uuid": "^11.0.3"
+    "uuid": "^11.1.0"
   },
   "peerDependencies": {
     "jose": ">=5.9.6",
