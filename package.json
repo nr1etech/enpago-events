@@ -54,5 +54,6 @@
       "import": "./types/index.d.mts",
       "types": "./types/index.d.mts"
     }
-  }
+  },
+  "packageManager": "pnpm@10.8.0"
 }
