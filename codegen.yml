@@ -1,0 +1,7 @@
+schema: '../schema.graphql'
+generates:
+  ./src/types/generated.mts:
+    plugins:
+      - 'typescript'
+    config:
+      useIndexSignature: true
