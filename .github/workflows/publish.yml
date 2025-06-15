@@ -12,8 +12,8 @@ jobs:
     uses: nr1etech/github-workflows/.github/workflows/javascript-library.yml@main
     if: github.actor != 'dependabot[bot]'
     with:
-      publish-dir: 'client/dist'
-      version-dir: 'client'
+      publish-dir: 'dist'
+      version-dir: ''
       node-versions: '[20,22]'
       publish-node-version: '22'
       develop-preid: 'beta'
