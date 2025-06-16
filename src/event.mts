@@ -1,4 +1,4 @@
-export type EventType = 'payment-change';
+export type EventType = 'PaymentChange';
 
 export interface EventMetadata {
   /**
