@@ -12,11 +12,6 @@ export interface ProviderConfiguration {
    * The configuration ID of the payment provider used to process this payment.
    */
   id: string;
-
-  /**
-   * The name of the payment provider used to process this payment.
-   */
-  name: string;
 }
 
 export type PaymentStatus =
@@ -34,19 +29,14 @@ export interface PaymentChangeEvent {
   event: EventMetadata;
 
   /**
-   * The ID of the payment
-   */
-  id: string;
-
-  /**
-   * The organization the payment belongs to.
-   */
-  org: string;
-
-  /**
    * The payment provider that processed this payment.
    */
   provider: ProviderConfiguration;
+
+  /**
+   * The ID of the payment
+   */
+  id: string;
 
   /**
    * The original amount of the payment before refunds. With a credit card
