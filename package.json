@@ -19,17 +19,6 @@
     "generate": "graphql-codegen --config codegen.yml",
     "site": "typedoc --out site \"src/**/*.ts\" --exclude \"src/**/*.test.ts\""
   },
-  "dependencies": {
-    "@apollo/client": "^3.12.11",
-    "aws-appsync-auth-link": "^3.0.7",
-    "graphql": "^16.10.0",
-    "jose": "^5.9.6",
-    "uuid": "^11.0.3"
-  },
-  "peerDependencies": {
-    "jose": ">=5.9.6",
-    "uuid": ">=11.0.3"
-  },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
     "@graphql-codegen/cli": "^5.0.3",
