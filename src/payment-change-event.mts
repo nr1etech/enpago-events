@@ -1,18 +1,4 @@
-import {EventMetadata} from './event.mjs';
-
-export type ProviderType = 'NMI' | 'Plaid';
-
-export interface ProviderConfiguration {
-  /**
-   * The type of payment provider that processed this payment.
-   */
-  type: ProviderType;
-
-  /**
-   * The configuration ID of the payment provider used to process this payment.
-   */
-  id: string;
-}
+export type PaymentProvider = 'NMI' | 'Plaid';
 
 export type PaymentStatus =
   | 'Pending' // Example would be an authorized credit card payment
@@ -22,16 +8,16 @@ export type PaymentStatus =
   | 'Errored'
   | 'Canceled';
 
-export interface PaymentChangeEvent {
+export interface PaymentChangeEventDetail {
   /**
-   * Event metadata.
+   * The provider that processed this payment.
    */
-  event: EventMetadata;
+  provider: PaymentProvider;
 
   /**
-   * The payment provider that processed this payment.
+   * The ID of the configuration that processed this payment.
    */
-  provider: ProviderConfiguration;
+  configuration: string;
 
   /**
    * The ID of the payment
@@ -66,5 +52,11 @@ export interface PaymentChangeEvent {
   /**
    * The date of the payment in ISO 8601 format.
    */
-  paymentDate: string;
+  date: string;
+}
+
+export interface PaymentChangeEvent {
+  source: string;
+  type: 'PaymentChange';
+  detail: PaymentChangeEventDetail;
 }
