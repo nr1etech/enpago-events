@@ -1,11 +1,11 @@
+export type EventSource = 'enpago-nmi';
+
 export type PaymentProvider = 'NMI' | 'Plaid';
 
 export type PaymentStatus =
   | 'Pending' // Example would be an authorized credit card payment
   | 'Completed' // Example would be a captured credit card payment
   | 'Finalized' // Example would be a settled credit card payment
-  | 'Failed'
-  | 'Errored'
   | 'Canceled';
 
 export interface PaymentChangeEventDetail {
@@ -56,7 +56,7 @@ export interface PaymentChangeEventDetail {
 }
 
 export interface PaymentChangeEvent {
-  source: string;
+  source: EventSource;
   type: 'PaymentChange';
   detail: PaymentChangeEventDetail;
 }
