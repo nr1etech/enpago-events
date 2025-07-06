@@ -1,7 +1,7 @@
 {
   "name": "@enpago/events",
   "description": "Events for Enpago",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "author": "NR1E, Inc",
   "publishConfig": {
