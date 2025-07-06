@@ -1,4 +1,4 @@
-export type EventSource = 'enpago-nmi';
+export type EventSource = 'enpago-nmi' | 'enpago-plaid';
 
 export type PaymentProvider = 'NMI' | 'Plaid';
 
