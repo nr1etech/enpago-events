@@ -8,6 +8,18 @@ export type PaymentStatus =
   | 'Finalized' // Example would be a settled credit card payment
   | 'Canceled';
 
+export interface PaymentSource {
+  name?: string;
+  connectionId?: string;
+  orderId?: string;
+  invoiceId?: string;
+  invoiceNumber?: string;
+  transactionId?: string;
+  contactId?: string;
+  contactName?: string;
+  contactEmail?: string;
+}
+
 export interface PaymentChangeEventDetail {
   /**
    * The provider that processed this payment.
@@ -53,6 +65,11 @@ export interface PaymentChangeEventDetail {
    * The date of the payment in ISO 8601 format.
    */
   date: string;
+
+  /**
+   * The source of the payment, if available.
+   */
+  source?: PaymentSource;
 }
 
 export interface PaymentChangeEvent {
