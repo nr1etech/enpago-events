@@ -69,12 +69,12 @@ export interface PaymentChangeEventDetail {
   /**
    * The expected settlement date in ISO 8601 format, if available.
    */
-  expectedSettlementDate?: string;
+  expectedSettlementDate?: string | null;
 
   /**
    * The expected funds available date in ISO 8601 format, if available.
    */
-  expectedFundsAvailableDate?: string;
+  expectedFundsAvailableDate?: string | null;
 
   /**
    * The source of the payment, if available.
